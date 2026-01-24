@@ -57,7 +57,7 @@ h3 {
   font-display: auto;
   padding: 0px;
   margin: 0px;
-  display:inline; 
+  display: inline; 
 }
 
 h1 {
@@ -100,13 +100,22 @@ span.highlight {
 }
 
 .float-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s cubic-bezier(0.4, 0.2, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.float-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.float-hover:hover, .float-hover:focus {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(142, 68, 173, 0.15), 0 1.5px 4px rgba(0,0,0,0.08);
+  z-index: 2;
 }
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
